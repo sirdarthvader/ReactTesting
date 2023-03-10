@@ -1,16 +1,18 @@
-import { useState } from "react";
-import UserForm from "./UserForm";
-import UserList from "./UserList";
+import { useState } from 'react';
+import UserForm from './UserForm';
+import UserList from './UserList';
 
 function App() {
-  const [users, setUsers] = useState([])
+  const [users, setUsers] = useState([]);
+
   const onUserAdd = (user) => {
-    setUsers([...users, user])
-  }
+    setUsers([...users, user]);
+  };
+
   return (
     <div>
       <UserForm onUserAdd={onUserAdd} />
-      <hr/>
+      <hr />
       <UserList users={users} />
     </div>
   );
